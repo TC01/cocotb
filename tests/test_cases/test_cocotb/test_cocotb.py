@@ -162,14 +162,14 @@ def test_clock_with_units(dut):
     clk_250mhz = Clock(dut.clk, 4.0, units='ns')
 
     if str(clk_1mhz) != "Clock(1.0 MHz)":
-        raise TestFailure("{} != 'Clock(1.0 MHz)'".format(str(clk_1mhz)))
+        raise TestFailure("{0} != 'Clock(1.0 MHz)'".format(str(clk_1mhz)))
     else:
-        dut._log.info('Created clock >{}<'.format(str(clk_1mhz)))
+        dut._log.info('Created clock >{0}<'.format(str(clk_1mhz)))
 
     if str(clk_250mhz) != "Clock(250.0 MHz)":
-        raise TestFailure("{} != 'Clock(250.0 MHz)'".format(str(clk_250mhz)))
+        raise TestFailure("{0} != 'Clock(250.0 MHz)'".format(str(clk_250mhz)))
     else:
-        dut._log.info('Created clock >{}<'.format(str(clk_250mhz)))
+        dut._log.info('Created clock >{0}<'.format(str(clk_250mhz)))
 
     clk_gen = cocotb.fork(clk_1mhz.start())
 
