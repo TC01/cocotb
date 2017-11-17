@@ -4,7 +4,6 @@
 # All rights reserved.
 
 CWD=$(shell pwd)
-COCOTB=$(CWD)/../../..
 
 TOPLEVEL_LANG ?=verilog
 
@@ -23,8 +22,8 @@ CUSTOM_SIM_DEPS=$(CWD)/Makefile
 
 VSIM_ARGS=-t 1ps
 
-include $(COCOTB)/makefiles/Makefile.inc
-include $(COCOTB)/makefiles/Makefile.sim
+include $(shell cocotb-path)/makefiles/Makefile.inc
+include $(shell cocotb-path)/makefiles/Makefile.sim
 
 # list all required Python files here
 sim: $(MODULE).py
