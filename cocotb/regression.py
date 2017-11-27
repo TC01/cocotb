@@ -217,7 +217,7 @@ class RegressionManager(object):
     def _add_failure(self, result):
         self.xunit.add_failure(stdout=repr(str(result)),
                                stderr="\n".join(self._running_test.error_messages),
-                               message="Test failed with random_seed={}".format(self._seed))
+                               message="Test failed with random_seed={0}".format(self._seed))
         self.failures += 1
 
     def handle_result(self, result):
