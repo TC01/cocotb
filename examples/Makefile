@@ -27,7 +27,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 
-COCOTB?=$(shell pwd)/../
+COCOTB=$(shell cocotb-path)
 export COCOTB
 
 EXAMPLES := adder/tests \
